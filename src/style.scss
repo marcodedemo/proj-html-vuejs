@@ -38,3 +38,36 @@ a{
   text-decoration: none;
   color: white;
 }
+
+// section small title
+.section-title{
+  text-transform: uppercase;
+  position: relative;
+
+  margin-left: 40px;
+
+  &::before{
+    content: '';
+    position: absolute;
+
+    top: 70%;
+    left: -40px;
+
+    height: 2px;
+    width: 30px;
+    background-color:#39ffbf ;
+  }
+}
+
+button.btn{
+  border: none;
+  padding: 15px 40px;
+
+  text-transform: uppercase;
+
+}
+
+button.btn-primary{
+  background-color: #39ffbf;
+  color: #1e1e38;
+}

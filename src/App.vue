@@ -1,8 +1,7 @@
 
 /* --------------------------------- script --------------------------------- */
 <script>
-
-  import AppNavbar from "./components/AppNavbar.vue";
+  import AppHeader from "./components/AppHeader.vue";
 
   export default{
     data(){
@@ -14,7 +13,7 @@
     },
 
     components:{
-      AppNavbar,
+      AppHeader,
 
     }
   }
@@ -27,7 +26,7 @@
 
   <div>
 
-    <AppNavbar></AppNavbar>
+    <AppHeader></AppHeader>
 
   </div>
 
