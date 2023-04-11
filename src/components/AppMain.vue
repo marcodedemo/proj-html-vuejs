@@ -5,6 +5,7 @@
   import MainServicesSection from './AppMainComponents/MainServicesSection.vue';
   import MainAboutUsSection from './AppMainComponents/MainAboutUsSection.vue';
   import MainProjectSection from './AppMainComponents/MainProjectSection.vue';
+  import MainTestimonialSection from './AppMainComponents/MainTestimonialSection.vue';
 
   export default{
     data(){
@@ -18,6 +19,7 @@
       MainServicesSection,
       MainAboutUsSection,
       MainProjectSection,
+      MainTestimonialSection,
     }
   }
 
@@ -31,6 +33,7 @@
     <MainServicesSection></MainServicesSection>
     <MainAboutUsSection></MainAboutUsSection>
     <MainProjectSection></MainProjectSection>
+    <MainTestimonialSection></MainTestimonialSection>
 
   </div>
 
