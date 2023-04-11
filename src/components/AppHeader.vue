@@ -51,7 +51,7 @@
 header{
   background-color: #1e1e38;
   background-image: url('../../public/img/portrait-of-young-architect-woman-on-meeting-KFZCE3A.jpg');
-  background-position: right;
+  background-position: right top;
   background-repeat: no-repeat;
   background-size: 60%;
 
@@ -89,6 +89,10 @@ header{
       background-color: transparent;
       border: 1px solid white;
       border-radius: 50%;
+
+      &:hover{
+        color: #f81d39;
+      }
 
     }
   }

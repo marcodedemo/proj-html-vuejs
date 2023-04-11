@@ -59,6 +59,14 @@ a{
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                   buttons                                  */
+/* -------------------------------------------------------------------------- */
+
+button:hover{
+  cursor: pointer;
+}
+
 button.btn{
   border: none;
   padding: 15px 40px;
@@ -70,4 +78,9 @@ button.btn{
 button.btn-primary{
   background-color: #39ffbf;
   color: #1e1e38;
+
+  &:hover{
+    background-color: #f81d39;
+    color: white;
+  }
 }
