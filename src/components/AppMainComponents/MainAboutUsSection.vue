@@ -39,7 +39,7 @@
       <span id="subtitle">we help to deliver the business case</span>
       <span id="paragraph">When, while lovely valley teems with vapour around meand meridian sun strikes the upper impenetrable foliage of my trees, and but a thousand unknown</span>
       
-      <button class="btn start-btn">Get Started</button>
+      <button class="btn red-btn">Get Started</button>
     </div>
 
   </section>
@@ -118,7 +118,7 @@
         color: #444444;
       }
 
-      .start-btn{
+      .red-btn{
         background-color: #f81d39;
 
         position: absolute;

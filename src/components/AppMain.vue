@@ -7,6 +7,7 @@
   import MainProjectSection from './AppMainComponents/MainProjectSection.vue';
   import MainTestimonialSection from './AppMainComponents/MainTestimonialSection.vue';
   import MainBlogSection from './AppMainComponents/MainBlogSection.vue';
+  import MainLetsTalkSection from './AppMainComponents/MainLetsTalkSection.vue';
 
   export default{
     data(){
@@ -22,6 +23,7 @@
       MainProjectSection,
       MainTestimonialSection,
       MainBlogSection,
+      MainLetsTalkSection,
     }
   }
 
@@ -37,6 +39,7 @@
     <MainProjectSection></MainProjectSection>
     <MainTestimonialSection></MainTestimonialSection>
     <MainBlogSection></MainBlogSection>
+    <MainLetsTalkSection></MainLetsTalkSection>
 
   </div>
 
