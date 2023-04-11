@@ -89,7 +89,7 @@
         
         &.active{
           
-          font-weight: bold;
+          text-shadow: 1px 0 white;
           color: white;
           
           &::before{
