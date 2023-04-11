@@ -2,6 +2,8 @@
 /* --------------------------------- script --------------------------------- */
 <script>
 
+  import MainServicesSection from './AppMainComponents/MainServicesSection.vue';
+
   export default{
     data(){
       return{
@@ -9,6 +11,9 @@
 
 
       }
+    },
+    components:{
+      MainServicesSection,
     }
   }
 
@@ -19,7 +24,8 @@
 <template>
 
   <div>
-
+    <MainServicesSection></MainServicesSection>
+    
 
   </div>
 
