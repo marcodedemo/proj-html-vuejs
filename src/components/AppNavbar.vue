@@ -1,20 +1,13 @@
 
 /* --------------------------------- script --------------------------------- */
 <script>
+  import {store} from './../store';
 
   export default{
     data(){
       return{
 
-        navbarLinks:[
-          "Home",
-          "About",
-          "Projects",
-          "Services",
-          "Blog",
-          "Contact",
-        ],
-
+        store,
         activeLink: 0,
 
 
@@ -41,7 +34,7 @@
     </div>
 
     <ul id="links">
-      <li v-for="(link, index) in navbarLinks" @click="changeActiveLink(index)" >
+      <li v-for="(link, index) in store.links" @click="changeActiveLink(index)" >
         <a href="#" :class="index == this.activeLink ? 'active' : '' ">{{ link }}</a>
       </li>
     </ul>
