@@ -3,6 +3,7 @@
 <script>
 
   import MainServicesSection from './AppMainComponents/MainServicesSection.vue';
+  import MainAboutUsSection from './AppMainComponents/MainAboutUsSection.vue';
 
   export default{
     data(){
@@ -14,6 +15,7 @@
     },
     components:{
       MainServicesSection,
+      MainAboutUsSection,
     }
   }
 
@@ -25,7 +27,7 @@
 
   <div>
     <MainServicesSection></MainServicesSection>
-    
+    <MainAboutUsSection></MainAboutUsSection>
 
   </div>
 

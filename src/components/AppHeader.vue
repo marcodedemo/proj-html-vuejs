@@ -53,14 +53,14 @@ header{
   background-image: url('../../public/img/portrait-of-young-architect-woman-on-meeting-KFZCE3A.jpg');
   background-position: right top;
   background-repeat: no-repeat;
-  background-size: 60%;
+  background-size: 60% ;
 
   #header-inner{
     display: flex;
     flex-direction: column;
     gap: 20px;
 
-    padding: 200px 0;
+    padding: 100px 0;
 
     h1{
       text-transform: uppercase;

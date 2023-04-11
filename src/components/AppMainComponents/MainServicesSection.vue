@@ -87,6 +87,8 @@
 
     overflow-x: hidden;
 
+    
+
     #services-inner{
 
       padding: 0 100px;
@@ -95,6 +97,8 @@
         text-transform: uppercase;
         color: #1e1e38;
         font-size: 1.5em;
+
+        margin-bottom: 100px;
         
         position: relative;
         
