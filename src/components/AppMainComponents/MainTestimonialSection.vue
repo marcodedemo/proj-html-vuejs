@@ -10,19 +10,22 @@
           {
             name:"Vera Duncan",
             company:"Amazon Inc.",
-            comment:"When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a thousand unknown plants are noticed by when I hear the buzz of the little."  
+            comment:"When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a thousand unknown plants are noticed by when I hear the buzz of the little.",
+            img:"oliver-ragfelt-488196-2.jpg",
+
+          },
+          {
+            name:"Vera Duncan",
+            company:"Amazon Inc.",
+            comment:"When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a thousand unknown plants are noticed by when I hear the buzz of the little.",
+            img:"oliver-ragfelt-488196-unsplash.jpg",
           
           },
           {
             name:"Vera Duncan",
             company:"Amazon Inc.",
-            comment:"When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a thousand unknown plants are noticed by when I hear the buzz of the little."  
-          
-          },
-          {
-            name:"Vera Duncan",
-            company:"Amazon Inc.",
-            comment:"When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a thousand unknown plants are noticed by when I hear the buzz of the little."  
+            comment:"When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a thousand unknown plants are noticed by when I hear the buzz of the little.",
+            img:"12679.jpg"
           
           },
         ]
@@ -58,6 +61,11 @@
       <div id="customer-opinions">
 
         <div v-for="customerOpinion in customerOpinions" class="opinion">
+
+          <div id="hover-background">
+            <img :src="'../../../public/img/' + customerOpinion.img" alt="">
+          </div>
+
           <p class="comment">{{ customerOpinion.comment }}</p>
           <span class="name">{{ customerOpinion.name }}</span>
           <span class="company">{{ customerOpinion.company }}</span>
@@ -122,34 +130,66 @@
 
     #customer-opinions{
       display: flex;
-      justify-content: space-evenly;
-      gap: 100px;
+      
       background-color: white;
       color: #aaaaaa;
 
       width: 90%;
 
-      padding: 50px 0;
-
+      
       .opinion{
         display: flex;
         flex-direction: column;
-        max-width: 350px;
+
+        width: calc(100% / 3);
+
+        padding: 80px;
+
+        position: relative;
+
+        overflow-y: hidden;
+        
+        &:hover #hover-background{
+          display: block;
+        }
+
+        #hover-background{
+          display: none;
+
+          width: 100%;
+
+          position: absolute;
+          top: 50%;
+          right: 0;
+
+          transform: translateY(-50%);
+
+
+
+          img{
+            width: 100%;
+          }
+        }
 
         .comment{
+          max-width: 350px;
           padding-bottom: 30px;
+          z-index: 2;
         }
 
         .name{
           font-weight: bold;
           color: #1e1e38;
           font-size: 1.2em;
+          z-index: 2;
         }
 
         .company{
           font-size: .8em;
+          z-index: 2;
         }
       }
+
     }
   }
 }

@@ -38,6 +38,7 @@
     background-image: url("../../../public/img/business-people-working-together-on-project-and-B3MZ4TX.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     padding: 200px 0;
 
     #content{
