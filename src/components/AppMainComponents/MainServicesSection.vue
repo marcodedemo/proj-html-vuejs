@@ -2,8 +2,6 @@
 /* --------------------------------- script --------------------------------- */
 <script>
 
-  import AppNavbar from "./components/AppNavbar.vue";
-
   export default{
     data(){
       return{
@@ -11,11 +9,6 @@
 
 
       }
-    },
-
-    components:{
-      AppNavbar,
-
     }
   }
 
@@ -27,7 +20,6 @@
 
   <div>
 
-    <AppNavbar></AppNavbar>
 
   </div>
 
