@@ -109,6 +109,10 @@ footer{
         text-transform: uppercase;
         color: #626172;
         font-size: .9em;
+
+        &:hover{
+          text-decoration: underline;
+        }
       }
     }
 
@@ -119,6 +123,10 @@ footer{
 
       a{
         padding: 0 10px;
+
+        &:hover{
+          color:#f81d39;
+        }
       }
 
     }
