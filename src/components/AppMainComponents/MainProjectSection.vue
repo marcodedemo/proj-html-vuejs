@@ -38,7 +38,22 @@
       </div>
       
       <div id="images">
-        <img v-for="image in images" :src="'../../../public/img/' + image " alt="">
+
+        <div v-for="image in images" id="image">
+
+          <img  :src="'../../../public/img/' + image " alt="">
+
+          <div id="product-info">
+            <span id="title">Purinky Products</span>
+            <span id="category">uncategorized</span>
+          </div>
+
+          <div id="add">
+            <i class="fa-solid fa-plus"></i>
+          </div>
+
+        </div>
+
       </div>
       
     </div>
@@ -94,10 +109,107 @@
     #images{
       display: flex;
       gap: 30px;
-      
-      img{
+
+      #image{
+
         width: calc(100% / 3 );
+
+        position: relative;
+
+        overflow: hidden;
+
+        img{
+          width: 100%;
+          height: 100%;
+
+          transition: transform 1.2s ease;
+
+        }
+
+        &::after{
+          content: '';
+  
+          display: block;
+
+          position: absolute;
+          top: 0;
+          right: 0;
+  
+          width: 100%;
+          height: 100%;
+          background-color: red;
+          mix-blend-mode: darken;
+          opacity: 0;
+          
+          transition: opacity 1.2s;
+
+        }
+
+        &:hover::after{
+          opacity: 1;
+        }
+
+        &:hover img{
+          transform: scale(1.5);
+        }
+
+        &:hover #add{
+          transform: translateY(-20px);
+        }
+        &:hover #product-info{
+          transform: translateY(-20px);
+        } 
+        
+        #product-info{
+          display: flex;
+          flex-direction: column;
+
+          position: absolute;
+          bottom: 0;
+          left: 20px;
+
+          transform: translateY(100px);
+
+          color: white;
+          z-index: 2;
+
+          transition: transform 1.2s ease;
+
+          #title{
+            font-weight: bold;
+          }
+
+          #category{
+            color: #ffffff8d;
+          }
+        }
+
+
+        #add{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          position: absolute;
+          bottom: 0;
+          right: 20px;
+
+          transform: translateY(100px);
+
+          width: 50px;
+          height: 50px;
+
+          background-color: #1e1e38;
+          
+
+          z-index: 2;
+
+          transition: transform 1.2s ease;
+
+
+        }
       }
+
     }
   }
 }
