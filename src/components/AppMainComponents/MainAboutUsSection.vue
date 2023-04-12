@@ -33,13 +33,16 @@
       </div>
 
     </div>
-      
-    <div id="about-us-bottom">
+    
+    <div id="about-us-bottom" >
+      <div id="background-fill"></div>
+      <div id="about-us-bottom-inner" class="centered">
 
-      <span id="subtitle">we help to deliver the business case</span>
-      <span id="paragraph">When, while lovely valley teems with vapour around meand meridian sun strikes the upper impenetrable foliage of my trees, and but a thousand unknown</span>
-      
-      <button class="btn red-btn">Get Started</button>
+        <span id="subtitle">we help to deliver the business case</span>
+        <span id="paragraph">When, while lovely valley teems with vapour around meand meridian sun strikes the upper impenetrable foliage of my trees, and but a thousand unknown</span>
+        
+        <button class="btn red-btn">Get Started</button>
+      </div>
     </div>
 
   </section>
@@ -94,36 +97,55 @@
     }
       
     #about-us-bottom{
-      display: flex;
-      justify-content: space-around;
-      background-color: #35ffbf;
-      width: 90%;
-
-      padding: 80px;
+      width: 100%;
 
       position: relative;
 
-      #subtitle{
-        color: black;
-        font-size: 1.4em;
-        font-weight: bold;
-        text-transform: uppercase;
-
-        max-width: 400px;
-
-      }
-
-      #paragraph{
-        max-width: 400px;
-        color: #444444;
-      }
-
-      .red-btn{
-        background-color: #f81d39;
-
+      #background-fill{
         position: absolute;
-        bottom: 0;
-        right: 0;
+        top: 0;
+        left: 0;
+
+        height: 100%;
+        width: calc(100% - 1200px);
+
+        background-color: #35ffbf;
+        
+
+      }
+      
+      #about-us-bottom-inner{
+        display: flex;
+        justify-content: space-around;
+        background-color: #35ffbf;
+        width: 100%;
+  
+        padding: 80px;
+  
+        position: relative;
+
+        #subtitle{
+          color: black;
+          font-size: 1.4em;
+          font-weight: bold;
+          text-transform: uppercase;
+          
+          max-width: 400px;
+          
+        }
+        
+        #paragraph{
+          max-width: 400px;
+          color: #444444;
+        }
+        
+        .red-btn{
+          background-color: #f81d39;
+          
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
       }
     }
   }
