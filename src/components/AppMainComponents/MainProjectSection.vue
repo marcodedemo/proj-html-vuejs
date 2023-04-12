@@ -26,17 +26,26 @@
 
     <div id="project-inner" class="centered">
 
+      <!-- texts - title - buttons -->
       <div id="texts">
         <span class="section-title">Project</span>
         <h2>Our Expert Trusted Consultants Help Clients</h2>
 
         <div id="slide-buttons">
-          <button><i class="fa-solid fa-arrow-left"></i></button>
-          <button><i class="fa-solid fa-arrow-right"></i></button>
+          <button class="arrow">
+            <i class="fa-solid fa-arrow-left"></i>
+            <div class="button-background"></div>
+          </button>
+
+          <button class="arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+            <div class="button-background"></div>
+          </button>
         </div>
 
       </div>
       
+      <!-- project images -->
       <div id="images">
 
         <div v-for="image in images" id="image">
@@ -98,10 +107,40 @@
         top: 50%;
         transform: translateY(-50%);
 
-        button{
+        .arrow{
           border: none;
           background-color: #36354b;
           padding: 14px;
+
+          position: relative;
+          z-index: 1;
+          overflow: hidden ;
+
+          .button-background{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 0;
+            height: 0;
+
+            background-color: #35ffbf;
+            border-radius: 50%;
+
+            transition: .4s;
+
+            z-index: -1;
+          }
+          
+          &:hover{
+            color: #1e1e38;
+          }
+
+          &:hover .button-background{
+            width: 150%;
+            height: 150%;
+          }
         }
       }
     }

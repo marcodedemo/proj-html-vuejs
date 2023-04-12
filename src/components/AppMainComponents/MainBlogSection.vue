@@ -38,17 +38,24 @@
 
     <div id="blog-inner" class="centered">
 
+      <!-- texts - title - button -->
       <div id="texts">
         <span class="section-title">Blog</span>
         <h2>The recent news you must read it</h2>
 
-        <button class="btn btn-primary">View All</button>
+        <button class="btn btn-green">
+          View All
+          <div id="button-background"></div>
+        </button>
+
       </div>
       
+      <!-- news image + info -->
       <div id="news">
         <div v-for="news in news" class="single-news">
           <img :src="'../../../public/img/' + news.img" alt="">
 
+          <!-- news div info -->
           <div class="news-info">
             <span id="date">{{ news.date }}</span>
             <span id="writer"> by {{ news.writer }}</span>

@@ -22,10 +22,12 @@
 
     <div id="about-us-top">
       
+      <!-- left img -->
       <div id="img-container">
         <img src="../../../public/img/business-people-working-together-on-project-and-5FHSKBL.jpg" alt="">
       </div>
       
+      <!-- right texts -->
       <div id="texts">
         <span class="section-title">about us</span>
         <h2>we make your strategy work</h2>
@@ -34,6 +36,7 @@
 
     </div>
     
+    <!-- bottom section -->
     <div id="about-us-bottom" >
       <div id="background-fill"></div>
       <div id="about-us-bottom-inner" class="centered">
@@ -41,7 +44,12 @@
         <span id="subtitle">we help to deliver the business case</span>
         <span id="paragraph">When, while lovely valley teems with vapour around meand meridian sun strikes the upper impenetrable foliage of my trees, and but a thousand unknown</span>
         
-        <button class="btn red-btn">Get Started</button>
+        <div id="start-button">
+          <button class="btn btn-red">
+            Get Started
+            <div id="button-background"></div>
+          </button>
+        </div>
       </div>
     </div>
 
@@ -139,13 +147,13 @@
           color: #444444;
         }
         
-        .red-btn{
-          background-color: #f81d39;
-          
+        #start-button{
           position: absolute;
           bottom: 0;
           right: 0;
+          
         }
+
       }
     }
   }

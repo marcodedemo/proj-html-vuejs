@@ -23,7 +23,10 @@
     <div id="content">
         <h2>Let's Talk About Work</h2>
         <span>A wonderful serenity has taken possession Far far away, behind the word mountains.</span>
-        <button class="btn black-btn">Get Started</button>
+        <button class="btn btn-black">
+          Get Started
+          <div id="button-background"></div>
+        </button>
     </div>
 
   </section>

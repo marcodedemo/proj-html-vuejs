@@ -67,21 +67,129 @@ button:hover{
   cursor: pointer;
 }
 
+// standard style
 button.btn{
   border: none;
   padding: 15px 40px;
 
   text-transform: uppercase;
 
+
+
 }
 
-button.btn-primary{
+
+// green button
+button.btn-green{
   background-color: #39ffbf;
   color: #1e1e38;
 
-  &:hover{
+  position: relative;
+  z-index: 1;
+  overflow: hidden  ;
+
+  #button-background{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 0;
+    height: 0;
+
     background-color: #f81d39;
+    border-radius: 50%;
+
+    transition: .4s;
+
+    z-index: -1;
+  }
+  
+  &:hover{
     color: white;
   }
+
+  &:hover #button-background{
+    width: 150%;
+    height: 500%;
+  }
+  
 }
 
+
+// red button
+
+button.btn-red{
+  background-color: #f81d39;
+  color: white;
+
+
+  position: relative;
+  z-index: 1;
+  overflow: hidden ;
+
+  #button-background{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 0;
+    height: 0;
+
+    background-color: #891020;
+    border-radius: 50%;
+
+    transition: .4s;
+
+    z-index: -1;
+  }
+  
+  &:hover{
+    color: white;
+  }
+
+  &:hover #button-background{
+    width: 150%;
+    height: 500%;
+  }
+  
+}
+
+
+// black button
+button.btn-black{
+  background-color: #1e1e38;
+  color: white;
+
+  position: relative;
+  z-index: 1;
+  overflow: hidden  ;
+
+  #button-background{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 0;
+    height: 0;
+
+    background-color: #39ffbf;
+    border-radius: 50%;
+
+    transition: .4s;
+
+    z-index: -1;
+  }
+  
+  &:hover{
+    color: #1e1e38;
+  }
+
+  &:hover #button-background{
+    width: 150%;
+    height: 500%;
+  }
+  
+}

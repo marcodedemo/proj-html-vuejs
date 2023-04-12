@@ -34,7 +34,10 @@
 
       <!-- header buttons -->
       <div id="buttons">
-        <button class="btn btn-primary">Read More</button>
+        <button class="btn btn-green">
+          Read More
+          <div id="button-background"></div>
+        </button>
         <button id="play-btn"><i class="fa-solid fa-play"></i></button>
       </div>
 
