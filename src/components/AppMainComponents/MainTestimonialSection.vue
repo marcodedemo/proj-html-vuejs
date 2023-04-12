@@ -56,19 +56,24 @@
 
     <!-- testimonial bottom section -->
     <div id="testimonial-bottom">
+      <div id="background-fill"></div>
 
-      <!-- opinions -->
-      <div id="customer-opinions">
+      <div id="testimonial-bottom-inner" class="centered">
 
-        <div v-for="customerOpinion in customerOpinions" class="opinion">
-
-          <div id="hover-background">
-            <img :src="'../../../public/img/' + customerOpinion.img" alt="">
+        <!-- opinions -->
+        <div id="customer-opinions">
+          
+          <div v-for="customerOpinion in customerOpinions" class="opinion">
+            
+            <div id="hover-background">
+              <img :src="'../../../public/img/' + customerOpinion.img" alt="">
+            </div>
+            
+            <p class="comment">{{ customerOpinion.comment }}</p>
+            <span class="name">{{ customerOpinion.name }}</span>
+            <span class="company">{{ customerOpinion.company }}</span>
           </div>
-
-          <p class="comment">{{ customerOpinion.comment }}</p>
-          <span class="name">{{ customerOpinion.name }}</span>
-          <span class="company">{{ customerOpinion.company }}</span>
+          
         </div>
 
       </div>
@@ -125,76 +130,90 @@
   }
 
   #testimonial-bottom{
-    display: flex;
-    justify-content: end;
+    position: relative;
 
-    #customer-opinions{
-      display: flex;
-      
+    #background-fill{
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      width: calc(100% - 1200px);
+      height: 100%;
+
       background-color: white;
-      color: #aaaaaa;
-
-      width: 90%;
-
+    }
+    
+    #testimonial-bottom-inner{
+      display: flex;
+      justify-content: end;
       
-      .opinion{
+      
+      #customer-opinions{
         display: flex;
-        flex-direction: column;
-
-        width: calc(100% / 3);
-
-        padding: 80px;
-
-        position: relative;
-
-        overflow-y: hidden;
         
-        &:hover #hover-background{
-          display: block;
-        }
-
-        #hover-background{
-          display: none;
-
-          width: 100%;
-
-          position: absolute;
-          top: 0;
-          right: 0;
-
-          overflow-x: hidden;
-
-
-
-          img{
+        background-color: white;
+        color: #aaaaaa;
+        
+        
+        
+        .opinion{
+          display: flex;
+          flex-direction: column;
+          
+          width: calc(100% / 3);
+          
+          padding: 60px;
+          
+          position: relative;
+          
+          overflow-y: hidden;
+          
+          &:hover #hover-background{
+            display: block;
+          }
+          
+          #hover-background{
+            display: none;
+            
             width: 100%;
             
+            position: absolute;
+            top: 0;
+            right: 0;
+            
+            overflow-x: hidden;
+            
+            
+            
+            img{
+              object-fit: cover;
+            }
+            
+            
           }
-
-
+          
+          .comment{
+            max-width: 300px;
+            padding-bottom: 30px;
+            z-index: 2;
+          }
+          
+          .name{
+            font-weight: bold;
+            color: #1e1e38;
+            font-size: 1.2em;
+            z-index: 2;
+          }
+          
+          .company{
+            font-size: .8em;
+            z-index: 2;
+          }
         }
-
-        .comment{
-          max-width: 300px;
-          padding-bottom: 30px;
-          z-index: 2;
-        }
-
-        .name{
-          font-weight: bold;
-          color: #1e1e38;
-          font-size: 1.2em;
-          z-index: 2;
-        }
-
-        .company{
-          font-size: .8em;
-          z-index: 2;
-        }
+        
       }
-
     }
   }
 }
-
+  
 </style>
