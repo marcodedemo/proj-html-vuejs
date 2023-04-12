@@ -27,6 +27,7 @@
       scrollToTop(){
         window.scrollTo({
           top:0,
+          behavior:"smooth",
         })
       }
     },
@@ -85,6 +86,8 @@
     border: 1px solid black;
     padding: 10px;
     border-radius: 50%;
+
+    cursor: pointer;
   }
   
   #message{
@@ -100,6 +103,9 @@
     font-size: 1.6em;
     padding: 10px;
     border-radius: 50%;
+
+    cursor: pointer;
+  
   }
 }
   
