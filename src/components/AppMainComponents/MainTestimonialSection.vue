@@ -159,20 +159,23 @@
           width: 100%;
 
           position: absolute;
-          top: 50%;
+          top: 0;
           right: 0;
 
-          transform: translateY(-50%);
+          overflow-x: hidden;
 
 
 
           img{
             width: 100%;
+            
           }
+
+
         }
 
         .comment{
-          max-width: 350px;
+          max-width: 300px;
           padding-bottom: 30px;
           z-index: 2;
         }
